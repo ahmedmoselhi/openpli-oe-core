@@ -25,15 +25,13 @@ PTI_NP_PATH ?= "/data/pti_np"
 FILESEXTRAPATHS_prepend := "${THISDIR}/fulan-dvb-modules:"
 
 SRC_URI = " \
-    git://github.com/kueken/driver.git;protocol=git \
-    file://ddbootup \
-    file://sh4booster \
+    git://github.com/BarviX6/driver.git;protocol=git \
     file://modules.conf \
     file://modules-conf.conf \
     file://COPYING \
 " 
 
-FILES_${PN} = "${sysconfdir}/init.d ${sysconfdir}/rcS.d ${sysconfdir}/modules-load.d ${sysconfdir}/modprobe.d"
+FILES_${PN} = "${sysconfdir}/init.d ${sysconfdir}/rcS.d ${sysconfdir}/modules-load.d ${sysconfdir}/modprobe.d /bin ${sysconfdir}"
 FILES = ""
 
 S = "${WORKDIR}/git"
@@ -113,10 +111,14 @@ do_install() {
     install -m 644 ${WORKDIR}/modules-conf.conf ${D}/${sysconfdir}/modprobe.d/_${MACHINE}.conf
     install -d ${D}/${sysconfdir}/init.d
     install -d ${D}/${sysconfdir}/rcS.d
-    install -m 0755 ${WORKDIR}/ddbootup ${D}${sysconfdir}/init.d
-    ln -sf ../init.d/ddbootup ${D}${sysconfdir}/rcS.d/S04ddbootup
-	install -m 0755 ${WORKDIR}/sh4booster ${D}${sysconfdir}/init.d
-	ln -sf ../init.d/sh4booster ${D}${sysconfdir}/rcS.d/S05sh4booster
+    install -m 0755 ${S}/ddbootup ${D}${sysconfdir}/init.d
+    ln -sf ../init.d/ddbootup ${D}${sysconfdir}/rcS.d/S01ddbootup
+    install -d ${D}/bin
+    install -m 755 ${S}/vdstandby ${D}/bin
+    install -d ${D}${sysconfdir}
+    install -m 644 ${S}/vdstandby.cfg ${D}${sysconfdir}
+    install -m 0755 ${S}/sh4booster ${D}${sysconfdir}/init.d
+    ln -sf ../init.d/sh4booster ${D}${sysconfdir}/rcS.d/S05sh4booster
 
     # if no pti_np sources are available and a custom pti.ko is present, overwrite the tdt one
     if [ ! -e ${PTI_NP_PATH}/Makefile ]; then
