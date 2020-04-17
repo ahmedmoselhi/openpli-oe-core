@@ -29,6 +29,8 @@ RDEPENDS_${PN} = " \
         python-textutils \
         python-pycurl \
         ffmpeg \
+        exteplayer3 \
+        gstplayer \
         wget \
         hlsdl \
         cmdwrap \
