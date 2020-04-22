@@ -9,5 +9,5 @@ SRC_URI = "http://download.videolan.org/pub/videolan/libdca/${PV}/libdca-${PV}.t
         file://fix-libdts-link-path.patch"
 S = "${WORKDIR}/libdca-${PV}"
 
-SRC_URI[md5sum] = "eb65623c2b9b4417aada8013760b090a"
-SRC_URI[sha256sum] = "98f98a9aa000a26b927c6facd15d18dcf664238adfc5db24f533c5932cdb1f40"
+SRC_URI[md5sum] = "68916db60e3017d92841f77908518a11"
+SRC_URI[sha256sum] = "3a0b13815f582c661d2388ffcabc2f1ea82f471783c400f765f2ec6c81065f6a"
