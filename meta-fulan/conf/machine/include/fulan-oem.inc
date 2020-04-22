@@ -110,6 +110,13 @@ MACHINE_EXTRA_RRECOMMENDS += "\
     enigma2-plugin-extensions-${MACHINE}vfd \
     "
 
+MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
+    mt7601u \
+    firmware-mt7601u \
+    rt3070 \
+    firmware-rt2870 \
+    "
+
 EXTRA_IMAGEDEPENDS += "\
     libpcre \
     libstgles \
@@ -117,6 +124,7 @@ EXTRA_IMAGEDEPENDS += "\
     "
 
 MACHINE_EXTRA_RDEPENDS += "\
+    enigma2-plugin-systemplugins-sparkvfdcontrol \
     libpcre \
     aio-grab \
     "

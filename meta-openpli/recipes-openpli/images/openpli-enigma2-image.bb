@@ -34,7 +34,9 @@ EXTERNAL_WIFI_DRIVERS += "\
 	\
 	rtl8192cu \
 	"
-
+ENIGMA2_PLUGINS_append_mipsel += "\
+       	enigma2-plugin-systemplugins-serviceapp \
+        "
 ENIGMA2_PLUGINS += "\
 	enigma2-plugin-extensions-audiosync \
 	enigma2-plugin-extensions-autobackup \
@@ -71,8 +73,9 @@ ENIGMA2_PLUGINS += "\
 	enigma2-plugin-extensions-subssupport \
 	enigma2-plugin-extensions-cacheflush \	
 	enigma2-plugin-extensions-e2iplayer \
-	enigma2-plugin-systemplugins-serviceapp \
+	enigma2-plugin-extensions-reconstructapsc \
 	enigma2-plugin-systemplugins-systemtime \
+	enigma2-plugin-systemplugins-mountmanager \
 	enigma2-plugin-softcams-oscam \
 	"
 DEPENDS += "\
@@ -86,6 +89,7 @@ IMAGE_INSTALL += "\
 	aio-grab \
 	cronie \
 	enigma2 \
+	enigma2-locale-meta \
 	enigma2-locale-en \
 	enigma2-locale-ru \
 	enigma2-locale-uk \
