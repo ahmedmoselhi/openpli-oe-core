@@ -32,8 +32,7 @@ PREFERRED_VERSION_samba = "3.%"
 PREFERRED_PROVIDER_lirc = "stlirc"
 PREFERRED_PROVIDER_virtual/egl = "libstgles"
 PREFERRED_PROVIDER_virtual/libgles1 = "libstgles"
-#PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicesh4"
-PREFERRED_PROVIDER_virtual/gstreamer1.0-dvbmediasink ?= "gstreamer1.0-plugin-multibox-dvbmediasink"
+PREFERRED_PROVIDER_virtual/enigma2-mediaservice ?= "enigma2-plugin-systemplugins-servicesh4"
 
 SERIAL_CONSOLE = "115200 ttyAS0"
 
@@ -87,7 +86,7 @@ IMAGE_CMD_jffs2_append = "\
 IMAGE_CMD_tar_prepend = "\
     cp ${DEPLOY_DIR_IMAGE}/uImage ${IMAGE_ROOTFS}/boot/${KERNEL_FILE}; \
     "
-
+	
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     stlinux24-sh4-stx7111-fdma-firmware \
     libmme-host \
@@ -105,8 +104,8 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     "
 
 MACHINE_EXTRA_RRECOMMENDS += "\
-    enigma2-plugin-systemplugins-servicemp3 \
-    enigma2-plugin-systemplugins-serviceapp \
+    enigma2-plugin-systemplugins-servicesh4 \
+    enigma2-plugin-systemplugins-sparkvfdcontrol \
     enigma2-plugin-systemplugins-sh4boostercontrol \
     enigma2-plugin-systemplugins-sh4osdadjustment \
     "
@@ -125,6 +124,7 @@ EXTRA_IMAGEDEPENDS += "\
     "
 
 MACHINE_EXTRA_RDEPENDS += "\
+    enigma2-plugin-systemplugins-sparkvfdcontrol \
     libpcre \
     aio-grab \
     "
