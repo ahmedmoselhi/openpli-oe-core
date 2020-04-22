@@ -2,6 +2,6 @@ require fulan-dvb-modules.inc
 
 PR = "${INC_PR}"
 
-SRCDATE = "20190921"
+SRCDATE = "20180405"
 
 COMPATIBLE_MACHINE = "spark"
