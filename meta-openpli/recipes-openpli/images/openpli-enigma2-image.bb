@@ -34,7 +34,9 @@ EXTERNAL_WIFI_DRIVERS += "\
 	\
 	rtl8192cu \
 	"
-
+ENIGMA2_PLUGINS_append_mipsel += "\
+       	enigma2-plugin-systemplugins-serviceapp \
+        "
 ENIGMA2_PLUGINS += "\
 	enigma2-plugin-extensions-audiosync \
 	enigma2-plugin-extensions-autobackup \
@@ -66,10 +68,13 @@ ENIGMA2_PLUGINS += "\
 	${@bb.utils.contains('OPENPLI_FEATURES', 'dvd', 'enigma2-plugin-extensions-cdinfo enigma2-plugin-extensions-dvdplayer', '', d)} \
 	${@bb.utils.contains('OPENPLI_FEATURES', 'fan', 'enigma2-plugin-systemplugins-tempfancontrol', '', d)} \
 	${@bb.utils.contains('OPENPLI_FEATURES', '7seg', 'enigma2-plugin-systemplugins-vfdcontrol', '', d)} \
-	enigma2-plugin-extensions-cacheflush \
+	enigma2-plugin-extensions-dlnabrowser \
+	enigma2-plugin-extensions-dlnaserver \
+	enigma2-plugin-extensions-subssupport \
 	enigma2-plugin-extensions-e2iplayer \
-	enigma2-plugin-systemplugins-serviceapp \
+	enigma2-plugin-extensions-reconstructapsc \
 	enigma2-plugin-systemplugins-systemtime \
+	enigma2-plugin-systemplugins-mountmanager \
 	enigma2-plugin-softcams-oscam \
 	"
 DEPENDS += "\
@@ -83,9 +88,8 @@ IMAGE_INSTALL += "\
 	aio-grab \
 	cronie \
 	enigma2 \
+	enigma2-locale-meta \
 	enigma2-locale-en \
-	enigma2-locale-ru \
-	enigma2-locale-uk \
 	libavahi-client \
 	settings-autorestore \
 	tuxbox-common \
