@@ -34,7 +34,7 @@ EXTERNAL_WIFI_DRIVERS += "\
 	\
 	rtl8192cu \
 	"
-	
+
 ENIGMA2_PLUGINS += "\
 	enigma2-plugin-extensions-audiosync \
 	enigma2-plugin-extensions-autobackup \

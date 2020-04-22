@@ -38,7 +38,7 @@ SERIAL_CONSOLE = "115200 ttyAS0"
 
 DVBPROVIDER = "kernel"
 
-MACHINE_FEATURES += "3dtv alsa ext2 ext3 usbhost serial hdmicec switchoff singlecore legacykernel fulan textlcd sh4booster no-nmap omb skins1080 directfb"
+MACHINE_FEATURES += "3dtv alsa ext2 ext3 usbhost serial hdmicec switchoff singlecore legacykernel fulan textlcd sh4booster no-nmap omb skins1080 directfb wlan"
 DISTRO_FEATURES_append += "gtk-directfb libsigc2"
 
 KERNEL_IMAGETYPE = "uImage"
