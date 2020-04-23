@@ -7,5 +7,5 @@ SRC_URI_append_spark7162 += "\
 	"
 
 SRC_URI_append_spark += "\
-	file://spark_fp-control.patch;striplevel=3;patch=1 \
-	"
+	file://spark_fp-control.patch;striplevel=3 \
+	
