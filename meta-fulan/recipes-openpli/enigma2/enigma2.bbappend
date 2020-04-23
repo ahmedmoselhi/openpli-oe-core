@@ -12,4 +12,4 @@ RDEPENDS_${PN}_append_sh4 += "\
 EXTRA_OECONF_append_sh4 += "\
 	--enable-${MACHINE} --with-lcd \
         "
-SRC_URI_sh4 = "${GITHUB_URI}/kueken/openpli-enigma2.git;branch=follow_oe_vfd"
+SRC_URI_sh4 = "${GITHUB_URI}/BarviX6/enigma2-openpli.git;branch=develop"
