@@ -11,6 +11,7 @@ S = "${WORKDIR}/git"
 
 PV = "1.2+git${SRCPV}"
 PKGV = "1.2+git${GITPKGV}"
+SRCREV = "${AUTOREV}"
 
 python populate_packages_prepend() {
     enigma2_plugindir = bb.data.expand('${libdir}/enigma2/python/Plugins', d)

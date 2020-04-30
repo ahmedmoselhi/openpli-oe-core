@@ -39,7 +39,6 @@ OPTIONAL_PACKAGES += " \
 	gdb \
 	grep \
 	gstplayer \
-	hddtemp \
 	hdparm \
 	inadyn-mt \
 	inetutils \
@@ -84,7 +83,6 @@ OPTIONAL_PACKAGES += " \
 	python-beautifulsoup4 \
 	python-futures \
 	python-singledispatch \
-	python-websocket \
 	python-isodate \
 	python-iso3166 \
 	python-iso639 \
@@ -92,7 +90,6 @@ OPTIONAL_PACKAGES += " \
 	ppp \
 	rsync \
 	rtorrent \
-	rtl8723a \
 	${@bb.utils.contains('MACHINE_ESSENTIAL_EXTRA_RDEPENDS', 'spycat-rtl8723bs', '', 'rtl8723bs', d)} \
 	${@bb.utils.contains('MACHINE', 'dm8000', '', 'rtl8812au', d)} \
 	rtl8814au \
@@ -148,9 +145,7 @@ ENIGMA2_OPTIONAL = " \
 	enigma2-plugin-extensions-modifyplifullhd \
 	enigma2-plugin-extensions-refreshbouquet \
 	enigma2-plugin-extensions-managerautofs \
-	enigma2-plugin-extensions-enhancedmoviecenter \
 	enigma2-plugin-extensions-moviemanager \
-	enigma2-plugin-systemplugins-crossepg \
 	enigma2-plugin-systemplugins-mountmanager \
 	enigma2-plugin-systemplugins-extnumberzap \
 	enigma2-plugin-systemplugins-newvirtualkeyboard \
@@ -159,7 +154,6 @@ ENIGMA2_OPTIONAL = " \
 	enigma2-plugin-systemplugins-extnumberzap \
 	enigma2-plugin-systemplugins-serviceapp \
 	enigma2-plugin-systemplugins-hrtunerproxy \
-	enigma2-plugin-systemplugins-quadpip \
 	enigma2-plugin-extensions-historyzapselector \
 	enigma2-plugin-extensions-install-exteplayer3 \
 	enigma2-plugin-extensions-install-ffmpeg \
@@ -174,9 +168,6 @@ ENIGMA2_OPTIONAL = " \
 	enigma2-plugin-skins-mx-hq9w \
 	enigma2-plugin-skins-pli-hd-fullnight \
 	enigma2-plugin-skins-sevenhd \
-	enigma2-plugin-skins-octetfhd \
-	enigma2-plugin-skins-maxfhdxta-raed \
-	enigma2-plugin-skins-multibox-raed \
 	enigma2-plugin-skins-simple-gray-hd \
 	enigma2-plugin-skins-pd1loi-hd-night \
 	enigma2-plugin-skins-glamouraurafhd \

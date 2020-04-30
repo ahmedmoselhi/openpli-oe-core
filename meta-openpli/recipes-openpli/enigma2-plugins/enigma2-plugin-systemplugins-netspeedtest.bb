@@ -1,17 +1,16 @@
-DESCRIPTION = "KeyAdder for Add BISS, PowerVU, Irdeto and Tandberg keys to current service."
-LICENSE = "GPLv3"
+DESCRIPTION = "NetSpeedTest plugin by mfaraj57"
 MAINTAINER = "Open Vision Developers"
-AUTHOR = "RAED"
+LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=1ebbd3e34237af26da5dc08a4e440464"
 
-SRC_URI = "git://github.com/OpenVisionE2/KeyAdder.git;protocol=git"
+SRC_URI = "git://github.com/OpenVisionE2/NetSpeedTest;protocol=git"
 
 inherit gitpkgv distutils-openplugins gettext
 
 S = "${WORKDIR}/git"
 
-PV = "2.5+git${SRCPV}"
-PKGV = "2.5+git${GITPKGV}"
+PV = "1.0+git${SRCPV}"
+PKGV = "1.0+git${GITPKGV}"
 SRCREV = "${AUTOREV}"
 
 python populate_packages_prepend() {
