@@ -51,7 +51,6 @@ OPTIONAL_PACKAGES += " \
 	joe \
 	less \
 	libbluray \
-	libsdl2 \
 	libudfread \
 	mc \
 	mediainfo \
@@ -89,11 +88,9 @@ OPTIONAL_PACKAGES += " \
 	picocom \
 	ppp \
 	rsync \
-	rtorrent \
 	${@bb.utils.contains('MACHINE_ESSENTIAL_EXTRA_RDEPENDS', 'spycat-rtl8723bs', '', 'rtl8723bs', d)} \
 	${@bb.utils.contains('MACHINE', 'dm8000', '', 'rtl8812au', d)} \
-	rtl8814au \
-	rtl8822bu \
+        rtl8188eu \
 	${@bb.utils.contains_any('MACHINE', 'dm8000 et5x00 et6x00 et9x00 vuduo vusolo vuuno vuultimo osmio4k', '', 'rtl8189es', d)} \
 	${@bb.utils.contains('MACHINE', 'osmio4k', '', 'rtl8192eu', d)} \
 	sabnzbd \
@@ -117,7 +114,6 @@ OPTIONAL_PACKAGES += " \
 	wscan \
 	yafc \
 	zeroconf \
-	zerotier \
 	unrar \
 	zip \
 	zsh \
@@ -169,7 +165,7 @@ ENIGMA2_OPTIONAL = " \
 	enigma2-plugin-skins-pli-hd-fullnight \
 	enigma2-plugin-skins-sevenhd \
 	enigma2-plugin-skins-simple-gray-hd \
-	enigma2-plugin-skins-pd1loi-hd-night \
+        enigma2-plugin-skins-octetfhd \
 	enigma2-plugin-skins-glamouraurafhd \
 	enigma2-plugins \
 	enigma2-skins \
