@@ -68,7 +68,8 @@ OPTIONAL_PACKAGES += " \
 	openssh \
 	openvpn \
 	openmultiboot \
-	parted \
+	p7zip \
+        parted \
 	procps \
 	pyload \
 	python-ipaddress \
@@ -125,6 +126,8 @@ OPTIONAL_PACKAGES += " \
 OPTIONAL_BSP_ENIGMA2_PACKAGES ?= ""
 ENIGMA2_OPTIONAL = " \
 	channelsettings-enigma2-meta \
+        enigma2-2boom-plugins \
+        enigma2-persianempire-plugins \
 	enigma2-pliplugins \
 	enigma2-plugin-extensions-automatic-fullbackup \
 	enigma2-plugin-drivers-usbserial \
@@ -155,6 +158,7 @@ ENIGMA2_OPTIONAL = " \
 	enigma2-plugin-extensions-install-ffmpeg \
 	enigma2-plugin-extensions-install-gstplayer \
 	enigma2-plugin-extensions-tmbd \
+        enigma2-plugin-extensions-weatherplugin2 \
 	enigma2-plugin-extensions-xmodem \
 	enigma2-plugin-extensions-youtube \
 	enigma2-plugin-extensions-youtube-dl \
