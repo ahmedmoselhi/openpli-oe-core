@@ -81,7 +81,7 @@ if [ -z "\$cxxincludes" ]; then
   cxxversion=\`\$cxx -dumpversion\`
   # pass the new value of c++-sysincludes via configparms
   echo "# c++-sysincludes added:" >> ${B}/configparms
-  echo "c++-sysincludes = -isystem \$sysroot/usr/include/c++/\$cxxversion -isystem \$sysroot/usr/include/c++/\$cxxversion/\$cxxmachine" >> ${B}/configparms
+  echo "c++-sysincludes = -isystem \$sysroot${incdir}/c++/\$cxxversion -isystem \$sysroot${incdir}/c++/\$cxxversion/\$cxxmachine" >> ${B}/configparms
 fi
 
 wrapper="${S}/scripts/cross-test-ssh.sh \$target"
