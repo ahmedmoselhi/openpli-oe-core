@@ -106,9 +106,9 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 
 MACHINE_EXTRA_RRECOMMENDS += "\
     enigma2-plugin-systemplugins-servicemp3 \
+    enigma2-plugin-systemplugins-sparkvfdcontrol \
     enigma2-plugin-systemplugins-sh4boostercontrol \
     enigma2-plugin-systemplugins-sh4osdadjustment \
-    enigma2-plugin-extensions-${MACHINE}vfd \
     "
 
 MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "\
@@ -126,6 +126,7 @@ EXTRA_IMAGEDEPENDS += "\
 
 MACHINE_EXTRA_RDEPENDS += "\
     enigma2-plugin-systemplugins-serviceapp \
+    enigma2-plugin-systemplugins-sparkvfdcontrol \
     libpcre \
     aio-grab \
     "

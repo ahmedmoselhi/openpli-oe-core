@@ -19,6 +19,7 @@ IMAGE_INSTALL = "\
 	fakelocale \
 	fuse-exfat \
 	glibc-binary-localedata-en-gb \
+	hdparm \
 	kernel-params \
 	modutils-loadscript \
 	nfs-utils-client \
@@ -49,7 +50,7 @@ IMAGE_FEATURES += "package-management"
 # of the installer that populates the rootfs. I wanted to call this
 # rootfs_remove_opkg_leftovers but that fails to parse.
 rootfs_removeopkgleftovers() {
-	rm -r ${IMAGE_ROOTFS}/var/lib/opkg/lists
+	rm -r ${IMAGE_ROOTFS}${localstatedir}/lib/opkg/lists
 }
 
 # Speedup boot by reducing the host key size. The time it takes grows
