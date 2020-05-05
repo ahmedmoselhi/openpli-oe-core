@@ -48,6 +48,7 @@ ENIGMA2_PLUGINS += "\
 	enigma2-plugin-extensions-ppanel \
 	\
 	enigma2-plugin-systemplugins-fastscan \
+	enigma2-plugin-systemplugins-hdmicec \
 	enigma2-plugin-systemplugins-hotplug \
 	enigma2-plugin-systemplugins-networkbrowser \
 	enigma2-plugin-systemplugins-positionersetup \
@@ -93,6 +94,7 @@ IMAGE_INSTALL += "\
 	enigma2-locale-uk \
 	enigma2-locale-ar \	
 	libavahi-client \
+	libcrypto-compat \
 	settings-autorestore \
 	tuxbox-common \
 	tuxbox-links \
