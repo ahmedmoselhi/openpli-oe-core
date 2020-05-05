@@ -1,6 +1,6 @@
 require conf/license/openpli-gplv2.inc
 require softcam.inc
-inherit cmake gitpkgv upx-compress
+inherit cmake gitpkgv
 
 DESCRIPTION = "OScam-emu ${PV} Open Source Softcam"
 LICENSE = "GPLv3"
@@ -10,15 +10,16 @@ FILESEXTRAPATHS_prepend := "${THISDIR}/enigma2-plugin-softcams-oscam:"
 
 PV = "git${SRCPV}"
 PKGV = "git${GITPKGV}"
+SRCREV = "${AUTOREV}"
+
 SRC_URI = "git://github.com/oscam-emu/oscam-patched.git;protocol=https"
 
 DEPENDS = "libusb openssl"
 
 S = "${WORKDIR}/git"
 B = "${S}"
-SRCREV = "${AUTOREV}"
 CAMNAME = "oscam-emu"
-CAMSTART = "${bindir}/oscam-emu --wait 0 --config-dir /etc/tuxbox/config/oscam-emu --daemon --pidfile /tmp/oscam-emu.pid --restart 2 --utf8"
+CAMSTART = "${bindir}/oscam-emu --wait 0 --config-dir ${sysconfdir}/tuxbox/config/oscam-emu --daemon --pidfile /tmp/oscam-emu.pid --restart 2 --utf8"
 CAMSTOP = "kill \`cat /tmp/oscam-emu.pid\` 2> /dev/null"
 
 SRC_URI += " \

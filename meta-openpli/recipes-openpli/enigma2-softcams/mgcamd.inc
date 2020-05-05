@@ -17,8 +17,8 @@ FILES_${PN} += "/usr/keys"
 CONFFILES = "/usr/keys/mg_cfg /usr/keys/ignore.list /usr/keys/newcamd.list /usr/keys/priority.list /usr/keys/replace.list"
 
 do_install() {
-	install -d ${D}${bindir}
-	install -m 0755 ${S}/mgcamd.${TARGET_ARCH} ${D}${bindir}${CAMNAME}
+	install -d ${D}/usr/bin
+	install -m 0755 ${S}/mgcamd.${TARGET_ARCH} ${D}/usr/bin/${CAMNAME}
 	install -d ${D}/usr/keys
 	install -m 0644 ${S}/mg_cfg ${D}/usr/keys/mg_cfg
 	install -m 0644 ${S}/ignore.list.example ${D}/usr/keys/ignore.list.example
@@ -30,3 +30,22 @@ do_install() {
 	touch ${D}/usr/keys/priority.list
 	touch ${D}/usr/keys/replace.list
 }
+
+# If no cam selected yet, install and start this cam (and don't start it on the build host).
+pkg_postinst_${PN}_append () {
+if [ -f /lib/ld-2.28.so ]; then
+	ln -s /lib/ld-2.28.so /lib/ld-linux.so.3
+elif [ -f /lib/ld-2.26.so ]; then
+	ln -s /lib/ld-2.26.so /lib/ld-linux.so.3
+elif [ -f /lib/ld-2.25.so ]; then
+	ln -s /lib/ld-2.25.so /lib/ld-linux.so.3
+fi
+}
+
+# Stop this cam (if running), and move softlink to None if we're the current cam
+pkg_prerm_${PN}_prepend () {
+if [ -L /lib/ld-linux.so.3 ]; then
+	rm -f /lib/ld-linux.so.3
+fi
+}
+

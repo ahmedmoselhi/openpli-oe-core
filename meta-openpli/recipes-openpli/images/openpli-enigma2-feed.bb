@@ -188,5 +188,12 @@ ENIGMA2_OPTIONAL = " \
 	meta-enigma2-dvdburn \
 	${OPTIONAL_BSP_ENIGMA2_PACKAGES} \
 	"
-
+OPTIONAL_WIFI_PACKAGES = "\
+	${@ 'wireguard-tools' if (bb.utils.vercmp_string("${KERNEL_VERSION}" or "0", '3.14') >= 0) else '' } \
+	${@ 'kernel-module-mt7610u' if (bb.utils.vercmp_string("${KERNEL_VERSION}" or "0", '4.2') < 0) else '' } \
+	${@ 'kernel-module-mt7601usta' if (bb.utils.vercmp_string("${KERNEL_VERSION}" or "0", '4.2') < 0) else '' } \
+	${@ 'kernel-module-rt3573sta' if (bb.utils.vercmp_string("${KERNEL_VERSION}" or "0", '3.12') < 0) else '' } \
+	${@ 'kernel-module-rt5572sta' if (bb.utils.vercmp_string("${KERNEL_VERSION}" or "0", '3.10') < 0) else '' } \
+	firmware-mt7601u \
+        "
 DEPENDS += "${OPTIONAL_PACKAGES} ${ENIGMA2_OPTIONAL}"
