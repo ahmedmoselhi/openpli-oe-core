@@ -27,7 +27,6 @@ IMAGE_INSTALL = "\
 	openssh-sftp \
 	openssh-sftp-server \
 	opkg \
-	packagegroup-base \
 	packagegroup-core-boot \
 	parted \
 	python-ipaddress  \

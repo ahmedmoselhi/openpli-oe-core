@@ -25,9 +25,11 @@ PTI_NP_PATH ?= "/data/pti_np"
 FILESEXTRAPATHS_prepend := "${THISDIR}/fulan-dvb-modules:"
 
 SRC_URI = " \
-    git://github.com/kueken/driver.git;protocol=git \
+    git://github.com/ahmedmoselhi/driver.git;protocol=git \
     file://ddbootup \
     file://sh4booster \
+    file://vdstandby \
+    file://vdstandby.cfg \
     file://modules.conf \
     file://modules-conf.conf \
     file://COPYING \

@@ -106,7 +106,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 
 MACHINE_EXTRA_RRECOMMENDS += "\
     enigma2-plugin-systemplugins-servicemp3 \
-    enigma2-plugin-systemplugins-sparkvfdcontrol \
     enigma2-plugin-systemplugins-sh4boostercontrol \
     enigma2-plugin-systemplugins-sh4osdadjustment \
     "
