@@ -11,3 +11,5 @@ SRC_URI = " git://anongit.freedesktop.org/gstreamer/gst-plugins-bad;branch=maste
 			file://003-rtmp-fix-seeking-and-potential-segfault.patch \
 			file://004-dvbapi5-fix-old-kernel.patch \
 "
+
+CFLAGS_append_sh4 += " -std=gnu99"

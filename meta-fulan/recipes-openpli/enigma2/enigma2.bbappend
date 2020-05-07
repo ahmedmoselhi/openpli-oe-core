@@ -9,4 +9,4 @@ RDEPENDS_${PN}_append_sh4 += "\
 	alsa-utils-amixer-conf \
 	"
 
-SRC_URI_sh4 = "${GITHUB_URI}/ahmedmoselhi/openpli-enigma2-sh4.git;branch=develop"
+SRC_URI_sh4 = "${GITHUB_URI}/ahmedmoselhi/openpli-enigma2-sh4.git;branch=follow_oe"
