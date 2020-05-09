@@ -1,6 +1,10 @@
 ENIGMA2_PLUGINS_append_sh4 += "\
 	kernel-module-block2mtd libcrypto \
 	enigma2-plugin-systemplugins-sh4boostercontrol \
+<<<<<<< HEAD
+=======
+	enigma2-plugin-extensions-${MACHINE}vfd \
+>>>>>>> parent of d3074f09... Revert "build with vfd"
 	"
 
 ENIGMA2_PLUGINS_append_spark7162 += "\
@@ -23,5 +27,5 @@ ENIGMA2_PLUGINS_append += "\
 
 IMAGE_INSTALL += "\
 	enigma2-plugin-skins-simple-gray-hd \
-        enigma2-plugin-skins-mx-hq7 \
+	enigma2-plugin-skins-mx-hq7 \
 	"
