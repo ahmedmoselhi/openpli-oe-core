@@ -105,11 +105,7 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
     "
 
 MACHINE_EXTRA_RRECOMMENDS += "\
-<<<<<<< HEAD
     enigma2-plugin-systemplugins-servicemp3 \
-=======
-    enigma2-plugin-systemplugins-servicesh4 \
->>>>>>> parent of d3074f09... Revert "build with vfd"
     enigma2-plugin-systemplugins-sh4boostercontrol \
     enigma2-plugin-systemplugins-sh4osdadjustment \
     enigma2-plugin-extensions-${MACHINE}vfd \
@@ -129,11 +125,7 @@ EXTRA_IMAGEDEPENDS += "\
     "
 
 MACHINE_EXTRA_RDEPENDS += "\
-<<<<<<< HEAD
     enigma2-plugin-systemplugins-serviceapp \
-    enigma2-plugin-systemplugins-sparkvfdcontrol \
-=======
->>>>>>> parent of d3074f09... Revert "build with vfd"
     libpcre \
     aio-grab \
     "

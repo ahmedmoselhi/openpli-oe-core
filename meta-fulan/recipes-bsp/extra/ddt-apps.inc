@@ -11,11 +11,7 @@ PV = "1.0+git${SRCPV}"
 PKGV = "1.0+git${GITPKGV}"
 
 SRC_URI = " \
-<<<<<<< HEAD
     git://github.com/ahmedmoselhi/apps.git;protocol=git \
-=======
-    git://github.com/kueken/apps.git;protocol=git \
->>>>>>> parent of d3074f09... Revert "build with vfd"
 "
 
 S = "${WORKDIR}/git/tools/${@d.getVar('PN',1).replace('-', '_')}"

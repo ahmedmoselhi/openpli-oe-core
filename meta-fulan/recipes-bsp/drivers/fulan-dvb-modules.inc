@@ -25,11 +25,7 @@ PTI_NP_PATH ?= "/data/pti_np"
 FILESEXTRAPATHS_prepend := "${THISDIR}/fulan-dvb-modules:"
 
 SRC_URI = " \
-<<<<<<< HEAD
-    git://github.com/ahmedmoselhi/driver.git;protocol=git \
-=======
     git://github.com/kueken/driver.git;protocol=git;branch=develop \
->>>>>>> parent of d3074f09... Revert "build with vfd"
     file://ddbootup \
     file://sh4booster \
     file://vdstandby \
