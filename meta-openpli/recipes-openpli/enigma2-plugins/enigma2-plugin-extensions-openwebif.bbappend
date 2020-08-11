@@ -2,11 +2,8 @@
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRC_URI_append_sh4 += " file://revert_grab_for_sh4.patch "
 
 SRC_URI_append_dm8000 = " file://get-rid-of-orgdream-check.patch"
-SRC_URI_append = " file://0001-revert-workaround-for-non-pli-streamproxy.patch \
-                   file://remove-obsolete-import-version.patch"
 
 python do_cleanup () {
     # contains: MACHINE, box image, remote image, remote map

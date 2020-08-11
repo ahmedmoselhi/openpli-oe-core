@@ -39,7 +39,7 @@ SERIAL_CONSOLE = "115200 ttyAS0"
 
 DVBPROVIDER = "kernel"
 
-MACHINE_FEATURES += "3dtv alsa ext2 ext3 usbhost serial hdmicec switchoff singlecore legacykernel fulan textlcd sh4booster no-nmap omb skins1080 directfb wlan"
+MACHINE_FEATURES += "3dtv alsa ext2 ext3 usbhost serial hdmicec switchoff singlecore legacykernel fulan textlcd no-nmap omb skins1080 directfb wlan"
 DISTRO_FEATURES_append += "gtk-directfb libsigc2"
 
 KERNEL_IMAGETYPE = "uImage"
@@ -106,7 +106,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS += "\
 
 MACHINE_EXTRA_RRECOMMENDS += "\
     enigma2-plugin-systemplugins-servicemp3 \
-    enigma2-plugin-systemplugins-sh4boostercontrol \
     enigma2-plugin-systemplugins-sh4osdadjustment \
     enigma2-plugin-extensions-${MACHINE}vfd \
     "

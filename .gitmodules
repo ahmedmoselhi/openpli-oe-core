@@ -13,3 +13,6 @@
 [submodule "meta-python2"]
 	path = meta-python2
 	url = git://git.openembedded.org/meta-python2
+[submodule "meta-qt5"]
+	path = meta-qt5
+	url = https://github.com/meta-qt5/meta-qt5.git
