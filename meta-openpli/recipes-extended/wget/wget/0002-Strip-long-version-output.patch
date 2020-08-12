@@ -70,7 +70,7 @@ diff --git a/src/version.h b/src/version.h
 index aeae086..7e10850 100644
 --- a/src/version.h
 +++ b/src/version.h
-@@ -29,8 +29,6 @@ as that of the covered work.  */
+@@ -32,8 +32,6 @@ as that of the covered work.  */
  
  /* Extern declarations for strings in version.c */
  extern const char *version_string;
