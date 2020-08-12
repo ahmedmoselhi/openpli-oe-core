@@ -2,22 +2,22 @@ diff --git a/src/Makefile.am b/src/Makefile.am
 index 23c4f46..5f3c9f0 100644
 --- a/src/Makefile.am
 +++ b/src/Makefile.am
-@@ -84,15 +84,6 @@ version.c:  $(wget_SOURCES) ../lib/libgnu.a
- 	echo '' >> $@
- 	echo '#include "version.h"' >> $@
- 	echo 'const char *version_string = "@VERSION@";' >> $@
--	echo 'const char *compilation_string = "'$(COMPILE)'";' \
--	    | sed -e "s,$(TOOLCHAIN_OPTIONS),,g" \
--	          -e "s,$(DEBUG_PREFIX_MAP),,g" \
--	    | $(ESCAPEQUOTE) >> $@
--	echo 'const char *link_string = "'$(CCLD) $(AM_CFLAGS) $(CFLAGS) \
--	$(AM_LDFLAGS) $(LDFLAGS) $(LIBS) $(wget_LDADD)'";' \
--	    | sed -e "s,$(TOOLCHAIN_OPTIONS),,g" \
--	          -e "s,$(DEBUG_PREFIX_MAP),,g" \
--	    | $(ESCAPEQUOTE) >> $@
- 
+@@ -85,15 +85,6 @@ version.c:  $(wget_SOURCES) ../lib/libgnu.a
+        echo '' >> $@
+        echo '#include "version.h"' >> $@
+        echo 'const char *version_string = "@VERSION@";' >> $@
+-       echo 'const char *compilation_string = "'$(COMPILE)'";' \
+-           | sed -e "s,$(TOOLCHAIN_OPTIONS),,g" \
+-                 -e "s,$$(echo $(DEBUG_PREFIX_MAP)),,g" \
+-           | $(ESCAPEQUOTE) >> $@
+-       echo 'const char *link_string = "'$(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+-       $(AM_LDFLAGS) $(LDFLAGS) $(LIBS) $(wget_LDADD)'";' \
+-           | sed -e "s,$(TOOLCHAIN_OPTIONS),,g" \
+-                 -e "s,$$(echo $(DEBUG_PREFIX_MAP)),,g" \
+-           | $(ESCAPEQUOTE) >> $@
+
  css.c: $(srcdir)/css.l
- 	$(LEX) $(LFLAGS) -o$@ $^
+        $(LEX) $(LFLAGS) -o$@ $^
 diff --git a/src/Makefile.in b/src/Makefile.in
 index d7a66b7..ef1a002 100644
 --- a/src/Makefile.in
