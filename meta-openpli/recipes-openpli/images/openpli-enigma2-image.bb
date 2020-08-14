@@ -71,11 +71,11 @@ ENIGMA2_PLUGINS += "\
 	enigma2-plugin-extensions-dlnaserver \
 	enigma2-plugin-extensions-subssupport \
 	enigma2-plugin-extensions-cacheflush \	
-	enigma2-plugin-extensions-e2iplayer \
         enigma2-plugin-systemplugins-serviceapp \
 	enigma2-plugin-systemplugins-systemtime \
 	enigma2-plugin-systemplugins-mountmanager \
 	enigma2-plugin-softcams-oscam-emu \
+        enigma2-plugin-softcams-wicardd \
 	"
 DEPENDS += "\
 	enigma2 \
