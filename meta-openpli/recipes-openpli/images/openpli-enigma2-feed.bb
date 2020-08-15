@@ -125,6 +125,7 @@ OPTIONAL_PACKAGES += " \
 
 OPTIONAL_BSP_ENIGMA2_PACKAGES ?= ""
 ENIGMA2_OPTIONAL = " \
+        enigma2-plugin-extensions-e2iplayer \
 	channelsettings-enigma2-meta \
         enigma2-2boom-plugins \
         enigma2-persianempire-plugins \
