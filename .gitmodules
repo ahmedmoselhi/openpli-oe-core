@@ -1,18 +1,22 @@
 [submodule "openembedded-core"]
 	path = openembedded-core
 	url = https://github.com/openembedded/openembedded-core.git
-	branch = master-next
+	branch = dunfell
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-	branch = master-next
+	branch = dunfell
 [submodule "bitbake"]
 	path = bitbake
 	url = https://github.com/openembedded/bitbake.git
-	branch = master-next
+	branch = 1.47
 [submodule "meta-python2"]
 	path = meta-python2
 	url = git://git.openembedded.org/meta-python2
 [submodule "meta-qt5"]
 	path = meta-qt5
 	url = https://github.com/meta-qt5/meta-qt5.git
+[submodule "meta-vuplus"]
+	path = meta-vuplus
+	url = https://github.com/vu-plus/meta-vuplus.git
+
